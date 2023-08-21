@@ -1,4 +1,4 @@
-package com.hazem.cryptocurrency.ui.theme
+package com.hazem.cryptocurrency.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
