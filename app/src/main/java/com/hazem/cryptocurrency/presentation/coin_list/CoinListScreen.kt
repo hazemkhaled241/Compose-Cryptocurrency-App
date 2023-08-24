@@ -16,17 +16,22 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavController
 import com.hazem.cryptocurrency.presentation.coin_list.component.CoinListItem
+import com.hazem.cryptocurrency.utils.Screen
 
 @Composable
 fun CoinListScreen(
-    coinListViewModel: CoinListViewModel = hiltViewModel()
+    coinListViewModel: CoinListViewModel = hiltViewModel(),
+    navController:NavController
 ) {
     val stateValue = coinListViewModel.state.value
     Box(modifier = Modifier.fillMaxSize()) {
         LazyColumn {
             items(stateValue.coins) {coin->
-           CoinListItem(coin = coin, onItemSelected = {})
+           CoinListItem(coin = coin, onItemSelected = {
+               navController.navigate(Screen.CoinDetailScreen.route + "/${coin.id}")
+           })
             }
         }
         if(stateValue.errorMessage.isNotBlank()) {
