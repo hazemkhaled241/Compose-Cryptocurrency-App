@@ -5,7 +5,7 @@
 [![GPLv3 License](https://img.shields.io/badge/targetSdk-34-yellow.svg)](https://opensource.org/licenses/)
 
 # Description
-Simple Cryptocurrency App that allows user to list all digital currency and know all details related to it 
+Simple Cryptocurrency App that allows user to list all digital currency and know all details related to it.
 # Features:
 1- Show all currencies.<br />
 2- Show details of currency.<br />
